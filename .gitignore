@@ -43,7 +43,5 @@ Thumbs.db
 *.testResult
 *.coverage
 
-# --- Archivos temporales de soluciones ---
+# --- Archivos temporales de soluciones (prueba) ---
 *.slnx
-
-prueba
