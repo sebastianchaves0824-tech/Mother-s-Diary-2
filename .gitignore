@@ -1,0 +1,47 @@
+# --- Unity ---
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]serSettings/
+MemoryCaptures/
+Recordings/
+
+# --- Cache y paquetes ---
+# Evita subir paquetes descargados automáticamente
+Packages/com.unity.package-manager/
+*.unitypackage
+
+# --- Configuración de IDEs ---
+# Visual Studio Code
+.vscode/
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# --- Plastic SCM ---
+.plastic/
+
+# --- Archivos de compilación ---
+*.apk
+*.aab
+*.exe
+*.dll
+*.so
+*.dylib
+*.app
+*.ipa
+
+# --- Archivos de sistema ---
+.DS_Store
+Thumbs.db
+
+# --- Archivos de pruebas ---
+*.testResult
+*.coverage
+
+# --- Archivos temporales de soluciones ---
+*.slnx
