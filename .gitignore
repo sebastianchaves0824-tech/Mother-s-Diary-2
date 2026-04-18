@@ -1,4 +1,4 @@
-# --- Unity ---
+# --- Unity (ignorar todo excepto Assets, Packages y ProjectSettings) ---
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
@@ -9,18 +9,11 @@
 MemoryCaptures/
 Recordings/
 
-# --- Cache y paquetes ---
-# Evita subir paquetes descargados automáticamente
-Packages/com.unity.package-manager/
-*.unitypackage
-
 # --- Configuración de IDEs ---
-# Visual Studio Code
 .vscode/
-
-# Rider / JetBrains
 .idea/
 *.sln.iml
+.vs/
 
 # --- Plastic SCM ---
 .plastic/
@@ -43,5 +36,9 @@ Thumbs.db
 *.testResult
 *.coverage
 
-# --- Archivos temporales de soluciones (prueba) ---
+# --- Archivos temporales de soluciones ---
 *.slnx
+*.sln
+*.csproj
+*.vsconfig
+*.conf
