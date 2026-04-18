@@ -36,9 +36,14 @@ Thumbs.db
 *.testResult
 *.coverage
 
+<<<<<<< HEAD
 --- Archivos temporales de soluciones ---
 *.slnx
 *.sln
 *.csproj
 *.vsconfig
 *.conf
+=======
+# --- Archivos temporales de soluciones (prueba) ---
+*.slnx
+>>>>>>> main
