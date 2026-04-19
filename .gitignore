@@ -1,4 +1,4 @@
-# --- Unity (ignorar todo excepto Assets, Packages y ProjectSettings) ---
+--- Unity (ignorar todo excepto Assets, Packages y ProjectSettings) ---
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
@@ -9,16 +9,16 @@
 MemoryCaptures/
 Recordings/
 
-# --- Configuración de IDEs ---
+--- Configuración de IDEs ---
 .vscode/
 .idea/
 *.sln.iml
 .vs/
 
-# --- Plastic SCM ---
+--- Plastic SCM ---
 .plastic/
 
-# --- Archivos de compilación ---
+--- Archivos de compilación ---
 *.apk
 *.aab
 *.exe
@@ -28,15 +28,15 @@ Recordings/
 *.app
 *.ipa
 
-# --- Archivos de sistema ---
+--- Archivos de sistema ---
 .DS_Store
 Thumbs.db
 
-# --- Archivos de pruebas ---
+--- Archivos de pruebas ---
 *.testResult
 *.coverage
 
-# --- Archivos temporales de soluciones ---
+--- Archivos temporales de soluciones ---
 *.slnx
 *.sln
 *.csproj
