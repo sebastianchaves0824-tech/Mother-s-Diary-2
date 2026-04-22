@@ -69,3 +69,5 @@ Thumbs.db
 *.csproj
 *.vsconfig
 *.conf
+ProjectSettings/Packages/com.unity.probuilder/Settings.json
+Assets/Scenes/Game.unity
