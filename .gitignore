@@ -1,8 +1,4 @@
-<<<<<<< HEAD
---- Unity (ignorar todo excepto Assets, Packages y ProjectSettings) ---,
-=======
 --- Unity (ignorar todo excepto Assets, Packages y ProjectSettings) ---
->>>>>>> main
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
@@ -13,27 +9,16 @@
 MemoryCaptures/
 Recordings/
 
-<<<<<<< HEAD
---- Configuración de IDEs ---,
-=======
 --- Configuración de IDEs ---
->>>>>>> main
 .vscode/
 .idea/
 *.sln.iml
 .vs/
 
-<<<<<<< HEAD
---- Plastic SCM ---,
-.plastic/
-
---- Archivos de compilación ---,
-=======
 --- Plastic SCM ---
 .plastic/
 
 --- Archivos de compilación ---
->>>>>>> main
 *.apk
 *.aab
 *.exe
@@ -43,17 +28,6 @@ Recordings/
 *.app
 *.ipa
 
-<<<<<<< HEAD
---- Archivos de sistema ---,
-.DS_Store
-Thumbs.db
-
---- Archivos de pruebas ---,
-*.testResult
-*.coverage
-
---- Archivos temporales de soluciones ---,
-=======
 --- Archivos de sistema ---
 .DS_Store
 Thumbs.db
@@ -63,11 +37,14 @@ Thumbs.db
 *.coverage
 
 --- Archivos temporales de soluciones ---
->>>>>>> main
 *.slnx
 *.sln
 *.csproj
 *.vsconfig
 *.conf
+
+Ignorar configuraciones locales de ProBuilder
 ProjectSettings/Packages/com.unity.probuilder/Settings.json
-Assets/Scenes/Game.unity
+
+Ignorar escenas específicas (si no querés versionarlas)
+Assets/Scenes/Game.unit
