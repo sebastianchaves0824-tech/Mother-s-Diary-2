@@ -42,3 +42,8 @@ Thumbs.db
 *.csproj
 *.vsconfig
 *.conf
+# Ignorar configuraciones locales de ProBuilder
+ProjectSettings/Packages/com.unity.probuilder/Settings.json
+
+# Ignorar escenas específicas (si no querés versionarlas)
+Assets/Scenes/Game.unity
