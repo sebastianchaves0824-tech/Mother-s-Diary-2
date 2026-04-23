@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -8,15 +9,18 @@ public class PlayerInteraction : MonoBehaviour
     //que solo choque con objetos con el layer interactable
     [SerializeField] private LayerMask interactLayer;
 
+    //Lista para guardar los ID d las llaves
+    private List<string> inventoryKeys = new List<string>();
+
     private void Update()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        if (Keyboard.current.fKey.wasPressedThisFrame)
         {
-            CheckForButton();
+            CheckInteraction();
         }
     }
 
-    private void CheckForButton()
+    private void CheckInteraction()
     {
         Ray ray = new Ray(transform.position, transform.forward);
 
@@ -26,12 +30,14 @@ public class PlayerInteraction : MonoBehaviour
         //Dispara el rayou y si tiene el componente necesario lo presiona
         if (Physics.Raycast(ray, out hit, interactDistance, interactLayer))
         {
-            PhysicalButton button = hit.collider.GetComponent<PhysicalButton>();
+            IInteractable interactable = hit.collider.GetComponent<IInteractable>();
 
-            if (button != null)
+            if (interactable != null)
             {
-                button.Press();
+               interactable.Interact(this);
             }
         }
     }
+    public void AddKey(string id) => inventoryKeys.Add(id);
+    public bool HasKey(string id) => inventoryKeys.Contains(id);
 }
