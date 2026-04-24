@@ -16,31 +16,8 @@ public class diarycode : MonoBehaviour
     {
         backButton.SetActive(false);
     }
-
-    public void Update()
-    {
-        if(diary.activeInHierarchy == true)
-        {
-        if (Input.GetKeyUp(KeyCode.RightArrow))
-        {
-            if (forwardButton.activeInHierarchy == true)
-            {
-                rotatePageforward();
-            }
-            //ForwardButtonActions();
-        }
-            if (Input.GetKeyUp(KeyCode.LeftArrow))
-            {
-                if (backButton.activeInHierarchy == true)
-                {
-                    rotatePageBackward();
-                }
-            //BackwardButtonActions();
-            }
-        }
-    }
     
-    private void rotatePageforward()
+    public void rotatePageforward()
     {
             pageIndex++;
             ForwardButtonActions();
@@ -48,7 +25,7 @@ public class diarycode : MonoBehaviour
             pages[pageIndex].SetAsLastSibling();
             pages[pageIndex].transform.Rotate(0,angle,0);
     }
-    private void rotatePageBackward()
+    public void rotatePageBackward()
     {
             BackwardButtonActions();
             angle = -180;
