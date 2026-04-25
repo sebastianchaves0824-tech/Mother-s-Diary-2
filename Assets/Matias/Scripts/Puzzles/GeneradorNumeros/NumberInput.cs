@@ -6,9 +6,16 @@ public class NumberInput : MonoBehaviour
 {
     [SerializeField] private NumberGenerator generator;
     [SerializeField] private TextMeshProUGUI screenText;
+
+    [Header("Ajustes de Recompensa")] //q objeto y donde va a aparecer
+    [SerializeField] private GameObject keyPrefab; 
+    [SerializeField] private Transform spawnPoint;
+    [SerializeField] private DoorSafeLock doorSafeLock;
+
     //guarda los numeros como strings
     private string currentInput = "";
     private bool isLocked = false;
+    private bool rewardSpawned = false;
 
     private void Start()
     {
@@ -44,6 +51,8 @@ public class NumberInput : MonoBehaviour
             {
                 isLocked = true;
                 if (screenText != null) screenText.text = "Ok";
+                if (doorSafeLock != null) doorSafeLock.OpenSafe();
+                SpawnKey();
             }
             else
             {
@@ -54,9 +63,19 @@ public class NumberInput : MonoBehaviour
         }
     }
 
+    private void SpawnKey()
+    {
+        if (rewardSpawned) return;
+        if (keyPrefab != null && spawnPoint != null)
+        {
+            Instantiate(keyPrefab, spawnPoint.position, spawnPoint.rotation);
+            rewardSpawned = true;
+        }
+    }
     private void ResetScreen()
     {
         currentInput = "";
         if (screenText != null) screenText.text = "----";
     }
+
 }
