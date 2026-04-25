@@ -129751,6 +129751,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1458011870}
     m_Modifications:
     - target: {fileID: 596292248509984418, guid: e52150c7a6b025a459cccb6e072650ae, type: 3}
+      propertyPath: m_PixelPerfect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 596292248509984418, guid: e52150c7a6b025a459cccb6e072650ae, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
       objectReference: {fileID: 0}
@@ -129852,6 +129856,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5178020898784797239, guid: e52150c7a6b025a459cccb6e072650ae, type: 3}
       propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5593863398598965299, guid: e52150c7a6b025a459cccb6e072650ae, type: 3}
+      propertyPath: m_UiScaleMode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6601828606634596324, guid: e52150c7a6b025a459cccb6e072650ae, type: 3}
