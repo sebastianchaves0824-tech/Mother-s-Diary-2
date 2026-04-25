@@ -5,7 +5,7 @@ using UnityEngine;
 public class diarycode : MonoBehaviour
 {
    
-    [SerializeField] List<Transform>pages;
+    public List<Transform>pages;
     int pageIndex = -1;
     float angle;
     [SerializeField] GameObject forwardButton;

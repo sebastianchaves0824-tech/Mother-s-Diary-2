@@ -8,9 +8,10 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private float interactDistance = 5f;
     //que solo choque con objetos con el layer interactable
     [SerializeField] private LayerMask interactLayer;
-
-    //Lista para guardar los ID d las llaves
+    //Lista para guardar los ID de las llaves que el jugador tiene;
+    [SerializeField] GameObject nextbutton;
     private List<string> inventoryKeys = new List<string>();
+    public diarycode pages;
 
     private void Update()
     {
@@ -31,6 +32,21 @@ public class PlayerInteraction : MonoBehaviour
         if (Physics.Raycast(ray, out hit, interactDistance, interactLayer))
         {
             IInteractable interactable = hit.collider.GetComponent<IInteractable>();
+            // si el objeto con el que choco tiene el tag de nota, se activa la primera pagina del diario que este desactivada y se borra el objeto con que choco.
+            if (hit.collider.CompareTag("note") == true)
+            {
+                for (int i = 0; i < pages.pages.Count; i++)
+                {
+                    if (pages.pages[i].gameObject.activeSelf == false)
+                    {
+                        pages.pages[i].gameObject.SetActive(true);
+                        nextbutton.SetActive(true);
+                        break;
+                    }
+                    hit.collider.gameObject.SetActive(false);
+                }
+         
+            }
 
             if (interactable != null)
             {
