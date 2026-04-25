@@ -79,8 +79,8 @@ public class FullScreen : MonoBehaviour
     public void ChangeResolution(int resolutionIndex)
     {
         Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, FullScreenMode.FullScreenWindow);
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreenMode);
 
-        Debug.Log("Cambiando resolución a: " + resolution.width + "x" + resolution.height);
+        Debug.Log("Cambiando resolución a: " + resolution.width + "x" + resolution.height + " en modo " + Screen.fullScreenMode);
     }
 }
