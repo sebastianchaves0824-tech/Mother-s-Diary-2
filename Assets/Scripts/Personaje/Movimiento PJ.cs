@@ -9,6 +9,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     [SerializeField] float minLimit = -80f;
     [SerializeField] float maxLimit = 80f;
     [SerializeField] Transform cameraTransform;
+    [SerializeField] GameObject diary;
 
 
     [SerializeField] Movimiento inputAction;
@@ -45,23 +46,45 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     private void Update()
     {
+        diaryActions();
         Movement();
         Look();
     }
 
     private void Look()
     {
+        if (diary.activeInHierarchy == false) 
+        {
         Vector2 mouseDelta = look * sensitivity;
         currentRotationY = Mathf.Clamp(currentRotationY - mouseDelta.y, minLimit, maxLimit);
         cameraTransform.localRotation = Quaternion.Euler(currentRotationY, 0f, 0f); 
         transform.Rotate(Vector3.up * mouseDelta.x);
+        }
     }
     private void Movement()
     {
+        if(diary.activeInHierarchy == false)
+        {
         Vector3 move = transform.right * this.move.x + transform.forward * this.move.y;
         characterController.Move(move * moveSpeed * Time.deltaTime);
 
         speed.y += gravity * Time.deltaTime;
         characterController.Move(speed * Time.deltaTime);
+        }
+    }
+    private void diaryActions()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab) && diary.activeInHierarchy == false)
+        {
+            diary.SetActive(true);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else if (Input.GetKeyDown(KeyCode.Tab) && diary.activeInHierarchy == true)
+        {
+            diary.SetActive(false);
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 }
