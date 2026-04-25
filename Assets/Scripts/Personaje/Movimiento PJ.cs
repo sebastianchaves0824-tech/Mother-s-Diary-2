@@ -131,11 +131,21 @@ public class NewMonoBehaviourScript : MonoBehaviour
     {
         isCrouching = true;
         isRunning = false;
+        
+        // Reducir la escala a la mitad al agacharse
+        Vector3 newScale = transform.localScale;
+        newScale.y *= 0.5f;
+        transform.localScale = newScale;
     }
 
     public void StandUp()
     {
         isCrouching = false;
+        
+        // Restaurar la escala original al levantarse
+        Vector3 newScale = transform.localScale;
+        newScale.y *= 2f;
+        transform.localScale = newScale;
     }
 
     public void Jump()
