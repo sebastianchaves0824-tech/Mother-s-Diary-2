@@ -29,6 +29,5 @@ private float sanityDecreaseRate = 1f;
             }
             sanityBar.fillAmount = currentSanity / maxSanity;
         }
-        Debug.Log(Mathf.FloorToInt(currentSanity));
     }
 }

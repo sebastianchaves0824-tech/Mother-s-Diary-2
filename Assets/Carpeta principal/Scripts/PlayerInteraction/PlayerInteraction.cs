@@ -10,8 +10,10 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private LayerMask interactLayer;
     //Lista para guardar los ID de las llaves que el jugador tiene;
     [SerializeField] GameObject nextbutton;
+    [SerializeField] float sanityIncreaseAmount;
     private List<string> inventoryKeys = new List<string>();
     public diarycode pages;
+    public Cordura cordura;
 
     private void Update()
     {
@@ -45,7 +47,7 @@ public class PlayerInteraction : MonoBehaviour
                     }
                     hit.collider.gameObject.SetActive(false);
                 }
-         
+                    cordura.currentSanity += sanityIncreaseAmount;
             }
 
             if (interactable != null)
