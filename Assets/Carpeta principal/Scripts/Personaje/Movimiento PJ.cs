@@ -47,10 +47,12 @@ public class NewMonoBehaviourScript : MonoBehaviour
         inputAction.Player.Jump.performed += obj => Jump();
     }
 
+    // Actualiza el vector de rotación de cámara según el movimiento del ratón
     private void SetLook(InputAction.CallbackContext context)
     {
         look = context.ReadValue<Vector2>();
     }    
+    // Actualiza el vector de movimiento según las teclas de dirección presionadas
     private void SetMovement(InputAction.CallbackContext context)
     {
         move = context.ReadValue<Vector2>();
@@ -65,6 +67,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         Look();
     }
 
+    // Maneja la rotación de la cámara vertical y horizontal, y ajusta su altura cuando se agacha
     private void Look()
     {
         if (diary.activeInHierarchy == false) 
@@ -81,6 +84,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         transform.Rotate(Vector3.up * mouseDelta.x);
         }
     }
+    // Maneja el movimiento del personaje, aplicando gravedad y la velocidad correspondiente (correr, caminar, agacharse)
     private void Movement()
     {
         if(diary.activeInHierarchy == false)
@@ -103,6 +107,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         characterController.Move(speed * Time.deltaTime);
         }
     }
+    // Controla la apertura y cierre del diario con la tecla Tab, mostrando u ocultando el cursor
     private void diaryActions()
     {
         if (Input.GetKeyDown(KeyCode.Tab) && diary.activeInHierarchy == false)
@@ -119,16 +124,19 @@ public class NewMonoBehaviourScript : MonoBehaviour
         }
     }
 
+    // Activa el estado de correr para aumentar la velocidad de movimiento
     public void Run()
     {
         isRunning = true;
     }
 
+    // Desactiva el estado de correr volviendo a la velocidad normal de caminata
     public void StopRunning()
     {
         isRunning = false;
     }
 
+    // Activa el estado de agacharse, reduce la velocidad y la escala vertical del personaje
     public void Crouch()
     {
         isCrouching = true;
@@ -140,6 +148,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         transform.localScale = newScale;
     }
 
+    // Desactiva el estado de agacharse y restaura la escala vertical original del personaje
     public void StandUp()
     {
         isCrouching = false;
@@ -150,6 +159,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         transform.localScale = newScale;
     }
 
+    // Hace saltar al personaje aplicando una fuerza vertical, solo si está en el suelo
     public void Jump()
     {
         if (characterController.isGrounded)
