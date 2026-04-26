@@ -9,13 +9,16 @@ public class PuzzleQTE : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textUI;
     [SerializeField] private Image radialCircle;
     [SerializeField] private Image radialCircleShadow;
+    [SerializeField] private Cordura cordura;
 
     [Header("Configuración de Audio")]
-    [SerializeField] private AudioSource soundTransmitter; 
+    [SerializeField] private AudioSource soundTransmitter;
     [SerializeField] private AudioClip failSound;
 
     [Header("Configuraión")]
     [SerializeField] private float timeToPress = 1.5f; //Sefundos para presionar
+    [SerializeField] private float failPenaltyPercent = 0.025f; // Penalización ajustable (2.5%)
+
     private string[] keys = { "W", "A", "S", "D" };
     private string currentKey;
     private int successes = 0;
@@ -86,11 +89,19 @@ public class PuzzleQTE : MonoBehaviour
             }
             else
             {
+                // Aplica el castigo por errar
+                if (cordura != null)
+                {
+                    float penalty = cordura.maxSanity * failPenaltyPercent;
+                    cordura.currentSanity -= penalty;
+                    if (cordura.currentSanity < 0) cordura.currentSanity = 0;
+                }
+
                 if (soundTransmitter != null && failSound != null)
                 {
                     soundTransmitter.PlayOneShot(failSound);
                 }
-                successes = 0; // Si fallás, volvés a empezar
+                successes = 0; // Si fallas, volves a empezar
                 yield return new WaitForSeconds(0.8f);
             }
 
@@ -101,15 +112,4 @@ public class PuzzleQTE : MonoBehaviour
         movimientoPJ.enabled = true;
         isPuzzleActive = false;
     }
-
-
-    //POR AHORA INICIA EL QTE CON "P"
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P) && !isPuzzleActive)
-        {
-            StartPuzzle();
-        }
-    }
-
 }
