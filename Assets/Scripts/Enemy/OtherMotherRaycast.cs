@@ -27,31 +27,24 @@ public class OtherMotherRaycast : MonoBehaviour
 
     void ComprobarVision()
     {
-        if (!detectado || jugadorTransform == null)
+        if (detectado && jugadorTransform == null)
         {
-            enVista = false;
-            return;
-        }
-
-        Vector3 origenOjos = transform.position + Vector3.up * 1.5f;
-        Vector3 direccion = (jugadorTransform.position - origenOjos).normalized;
+             Vector3 origenOjos = transform.position + Vector3.up * 1.5f;
+        Vector3 direccionAljugador = (jugadorTransform.position - origenOjos).normalized;
 
         RaycastHit hit;
 
-        if (Physics.Raycast(origenOjos, direccion, out hit, rangoVision))
+        if (Physics.Raycast(origenOjos, direccionAljugador, out hit, rangoVision))
         {
             if (hit.collider.CompareTag("Player"))
             {
-                enVista = true;
+                detectado = true;
             }
             else
             {
-                enVista = false;
+                detectado = false;
             }
         }
-        else
-        {
-            enVista = false;
         }
     }
 
@@ -69,7 +62,6 @@ public class OtherMotherRaycast : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             detectado = false;
-            enVista = false;
         }
     }
 }
