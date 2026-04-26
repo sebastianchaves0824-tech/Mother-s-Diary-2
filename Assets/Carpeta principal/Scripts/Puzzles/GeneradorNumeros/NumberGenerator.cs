@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class NumberGenerator : MonoBehaviour
 {
-    private int secretNumber;
+    public int secretNumber;
     void Start()
     {
         GenerateCode();
