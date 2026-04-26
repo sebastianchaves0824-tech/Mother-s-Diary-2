@@ -532,7 +532,7 @@ GameObject:
   - component: {fileID: 5593863398598965299}
   - component: {fileID: 2329588829715645092}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Diario
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

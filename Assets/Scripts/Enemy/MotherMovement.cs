@@ -49,4 +49,9 @@ public class MotherMovement : MonoBehaviour
         Transform destino = destinos[nuevoIndex];
         agent.SetDestination(destino.position);
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        
+    }
+}
 }
