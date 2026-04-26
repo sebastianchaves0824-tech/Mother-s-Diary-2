@@ -1,3 +1,5 @@
+using NUnit.Framework;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +9,7 @@ public class Cordura : MonoBehaviour
 
 public float currentSanity;
 public float maxSanity;
+public OtherMotherRaycast raycast;
 private float sanityDecreaseRate = 1f;
     void Start()
     {
@@ -16,7 +19,14 @@ private float sanityDecreaseRate = 1f;
     {
        if (currentSanity > 0)
         {
-            currentSanity -= sanityDecreaseRate * Time.deltaTime;
+            if (!raycast.detectado)
+            {
+                currentSanity -= sanityDecreaseRate * Time.deltaTime;
+            }
+            else
+            {
+                currentSanity -= sanityDecreaseRate * 3 * Time.deltaTime;
+            }
             sanityBar.fillAmount = currentSanity / maxSanity;
         }
         Debug.Log(Mathf.FloorToInt(currentSanity));
