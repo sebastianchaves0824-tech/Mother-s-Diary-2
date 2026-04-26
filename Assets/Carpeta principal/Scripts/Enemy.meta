@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Matias/Scripts/Enemy.meta
+guid: ad4a7941cbfbbf141bb51ff2794f1316
+=======
 guid: 7ac0801004e9cfc4dad2c50980aa54f6
+>>>>>>> MAian:Assets/Carpeta principal/Scripts/Enemy.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
