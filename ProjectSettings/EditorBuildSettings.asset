@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Carpeta secundaria/Scenes/Ian/MainMenu.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Carpeta principal/Scenes/MainMenu.unity
+    guid: c48820c448138a148b53f9df1fd439f9
   - enabled: 1
-    path: Assets/Carpeta secundaria/Scenes/Sebastian/Game.unity
-    guid: 5db518af7f3cff7489ca73d758ad948d
+    path: Assets/Carpeta principal/Scenes/Game.unity
+    guid: 47c553e5584e81f46b08fb78a7a21fce
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 4a0257f0265775f4ba2b04aa0026874b, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
