@@ -3,12 +3,17 @@ using UnityEngine;
 public class PauseManager : MonoBehaviour
 {    
     public GameObject OptionsMenu;
-    public GameObject MainMenu;      
+    public GameObject MainMenu;    
+    public GameObject insanityBar;
+    public GameObject diary;     
 
     private bool gamePaused = false;
 
     void Update()
     {
+        // No pausar si el diario está abierto
+        if (diary != null && diary.activeInHierarchy) return;
+        
         // Detectar la tecla Escape
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -27,6 +32,8 @@ public class PauseManager : MonoBehaviour
     {
         // Mostrar el menu y detener el juego
         OptionsMenu.SetActive(true);
+        insanityBar.SetActive(false);
+
         Time.timeScale = 0f;
         gamePaused = true;
 
@@ -38,7 +45,8 @@ public class PauseManager : MonoBehaviour
     public void Resume()
     {
         if (MainMenu != null) MainMenu.SetActive(false);
-    if (OptionsMenu != null) OptionsMenu.SetActive(false);      
+    if (OptionsMenu != null) OptionsMenu.SetActive(false);  
+    if (insanityBar != null) insanityBar.SetActive(true);   
         
         Time.timeScale = 1f;
         gamePaused = false;
@@ -47,4 +55,6 @@ public class PauseManager : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
+
+    
 }
