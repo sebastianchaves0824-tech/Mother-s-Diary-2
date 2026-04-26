@@ -10,6 +10,10 @@ public class PuzzleQTE : MonoBehaviour
     [SerializeField] private Image radialCircle;
     [SerializeField] private Image radialCircleShadow;
 
+    [Header("Configuración de Audio")]
+    [SerializeField] private AudioSource soundTransmitter; 
+    [SerializeField] private AudioClip failSound;
+
     [Header("Configuraión")]
     [SerializeField] private float timeToPress = 1.5f; //Sefundos para presionar
     private string[] keys = { "W", "A", "S", "D" };
@@ -62,9 +66,9 @@ public class PuzzleQTE : MonoBehaviour
                 }
 
                 // Si presiona la tecla equivocada, reinicia el contador de exitos
-                if (Input.anyKeyDown && !Input.GetKeyDown(currentKey.ToLower()))
+                if (Input.anyKeyDown && !Input.GetKeyDown(currentKey.ToLower()) && !Input.GetKeyDown(KeyCode.P))
                 {
-                    successes = 0;
+                    pressedCorrectly = false;
                     break;
                 }
                 yield return null;
@@ -82,6 +86,10 @@ public class PuzzleQTE : MonoBehaviour
             }
             else
             {
+                if (soundTransmitter != null && failSound != null)
+                {
+                    soundTransmitter.PlayOneShot(failSound);
+                }
                 successes = 0; // Si fallás, volvés a empezar
                 yield return new WaitForSeconds(0.8f);
             }
