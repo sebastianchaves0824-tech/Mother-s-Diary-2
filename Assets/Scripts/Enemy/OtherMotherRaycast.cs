@@ -8,8 +8,8 @@ public class OtherMotherRaycast : MonoBehaviour
     [Header("Referencias")]
     [SerializeField] public Transform jugadorTransform;
 
-    public bool detectado = false;   // Está dentro del trigger
-    public bool enVista = false;     // Lo estoy viendo con raycast
+    public bool detectado = false; 
+    public bool enVista = false;
 
     void Start()
     {
@@ -55,7 +55,6 @@ public class OtherMotherRaycast : MonoBehaviour
         }
     }
 
-    // --- DETECCIÓN POR TRIGGER ---
 
     private void OnTriggerEnter(Collider other)
     {

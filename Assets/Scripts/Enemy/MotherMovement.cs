@@ -37,15 +37,7 @@ public class MotherMovement : MonoBehaviour
 
     private void ElegirNuevoDestino()
     {
-        if (destinos == null || destinos.Count < 2)
-        {
-            Debug.LogWarning("Necesitás al menos 2 destinos");
-            return;
-        }
-
         int nuevoIndex;
-
-        // Evita repetir el último destino
         do
         {
             nuevoIndex = Random.Range(0, destinos.Count);
