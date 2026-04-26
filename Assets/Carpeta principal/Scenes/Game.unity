@@ -77571,6 +77571,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5436271429681549038, guid: 77b7b02ccb87b1f44b584d8f2f87897b, type: 3}
+      propertyPath: m_Range
+      value: 80
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -130569,6 +130573,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1973051140}
     m_Modifications:
+    - target: {fileID: 1278922573657916387, guid: 64bc7fbe9e1e57b4ebd10157442ada9c, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1973051137}
+    - target: {fileID: 1278922573657916387, guid: 64bc7fbe9e1e57b4ebd10157442ada9c, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeSlider
+      objectReference: {fileID: 0}
     - target: {fileID: 2588244150290513165, guid: 64bc7fbe9e1e57b4ebd10157442ada9c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -130592,6 +130604,14 @@ PrefabInstance:
     - target: {fileID: 4087319585612127305, guid: 64bc7fbe9e1e57b4ebd10157442ada9c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097053240919413304, guid: 64bc7fbe9e1e57b4ebd10157442ada9c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4754340961664366745, guid: 64bc7fbe9e1e57b4ebd10157442ada9c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4844436202939455813, guid: 64bc7fbe9e1e57b4ebd10157442ada9c, type: 3}
       propertyPath: m_Pivot.x
@@ -130679,7 +130699,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5237036663613864653, guid: 64bc7fbe9e1e57b4ebd10157442ada9c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726805376855741276, guid: 64bc7fbe9e1e57b4ebd10157442ada9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1973051138}
+    - target: {fileID: 6726805376855741276, guid: 64bc7fbe9e1e57b4ebd10157442ada9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActiveFullScreen
       objectReference: {fileID: 0}
     - target: {fileID: 7538784770170143655, guid: 64bc7fbe9e1e57b4ebd10157442ada9c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -130693,6 +130721,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PauseManager, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 7935940667528441147, guid: 64bc7fbe9e1e57b4ebd10157442ada9c, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7935940667528441147, guid: 64bc7fbe9e1e57b4ebd10157442ada9c, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1973051138}
+    - target: {fileID: 7935940667528441147, guid: 64bc7fbe9e1e57b4ebd10157442ada9c, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeResolution
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985515598783609396, guid: 64bc7fbe9e1e57b4ebd10157442ada9c, type: 3}
+      propertyPath: mainMenu
+      value: 
+      objectReference: {fileID: 1174551279}
+    - target: {fileID: 8985515598783609396, guid: 64bc7fbe9e1e57b4ebd10157442ada9c, type: 3}
+      propertyPath: optionsMenu
+      value: 
+      objectReference: {fileID: 1733108223}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
