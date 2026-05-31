@@ -28,6 +28,8 @@ private float sanityDecreaseRate = 1f;
                 currentSanity -= sanityDecreaseRate * 3 * Time.deltaTime;
             }
             sanityBar.fillAmount = currentSanity / maxSanity;
+            Debug.Log("Sanity: " + currentSanity);
         }
+
     }
 }

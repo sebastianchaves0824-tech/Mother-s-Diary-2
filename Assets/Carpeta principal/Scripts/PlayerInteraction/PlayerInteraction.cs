@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 public class PlayerInteraction : MonoBehaviour
 {
     //q tan lejos llega el raycast del puntero
@@ -14,6 +15,7 @@ public class PlayerInteraction : MonoBehaviour
     private List<string> inventoryKeys = new List<string>();
     public diarycode pages;
     public Cordura cordura;
+    private float valorcordura;
 
     private void Update()
     {
@@ -47,7 +49,7 @@ public class PlayerInteraction : MonoBehaviour
                     }
                     hit.collider.gameObject.SetActive(false);
                 }
-                    cordura.currentSanity += sanityIncreaseAmount;
+                cordura.currentSanity = Mathf.Clamp(cordura.currentSanity + sanityIncreaseAmount, 0, cordura.maxSanity);   
             }
 
             if (interactable != null)

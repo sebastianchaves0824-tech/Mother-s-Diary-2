@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class diarycode : MonoBehaviour
@@ -11,7 +12,6 @@ public class diarycode : MonoBehaviour
     [SerializeField] GameObject forwardButton;
     [SerializeField] GameObject backButton;
     [SerializeField] GameObject diary;
-
     public void Start()
     {
         backButton.SetActive(false);
