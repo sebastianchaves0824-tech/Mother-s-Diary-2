@@ -2,29 +2,48 @@ using UnityEngine;
 
 public class Flashlight : MonoBehaviour
 {
-    private Camera mainCamera;
-    private Light flashlightLight;
+    // Referencia a la luz (asegúrate de que sea tipo Spot Light)
+    [SerializeField] private Light linterna;
 
+    // Valores normales
+    [SerializeField] private float rangoNormal = 10f;
+    [SerializeField] private float intensidadNormal = 2f;
+    [SerializeField] private float outerSpotNormal = 30f;
+
+    // Valores al presionar click izquierdo
+    [SerializeField] private float rangoAumentado = 20f;
+    [SerializeField] private float intensidadAumentada = 5f;
+    [SerializeField] private float outerSpotAumentado = 60f;
+ 
     void Start()
     {
-        // Obtener la cámara principal
-        mainCamera = Camera.main;
-        
-        // Obtener el componente Light del flashlight
-        flashlightLight = GetComponent<Light>();
-        
-        if (mainCamera == null)
-            Debug.LogError("No se encontró la cámara principal");
-        if (flashlightLight == null)
-            Debug.LogError("No se encontró el componente Light en el flashlight");
+        // Configurar valores iniciales
+        if (linterna != null)
+        {
+            linterna.range = rangoNormal;
+            linterna.intensity = intensidadNormal;
+            linterna.spotAngle = outerSpotNormal;
+        }
     }
 
     void Update()
     {
-        if (mainCamera == null)
-            return;
-
-        // Hacer que la linterna apunte en la dirección de la cámara (hacia el crosshair)
-        transform.rotation = mainCamera.transform.rotation;
+        if (linterna != null)
+        {
+            // Si se mantiene presionado el click izquierdo
+            if (Input.GetMouseButton(0)) // 0 = click izquierdo
+            {
+                linterna.range = rangoAumentado;
+                linterna.intensity = intensidadAumentada;
+                linterna.spotAngle = outerSpotAumentado;
+            }
+            else
+            {
+                // Vuelve a los valores normales
+                linterna.range = rangoNormal;
+                linterna.intensity = intensidadNormal;
+                linterna.spotAngle = outerSpotNormal;
+            }
+        }
     }
 }
