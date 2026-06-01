@@ -20,11 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-<<<<<<< HEAD
-  m_AmbientSkyColor: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
-=======
   m_AmbientSkyColor: {r: 0.9528302, g: 0.9528302, b: 0.9528302, a: 1}
->>>>>>> origin/MAian
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -180009,8 +180005,6 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
-<<<<<<< HEAD
-=======
 --- !u!1 &668234390
 GameObject:
   m_ObjectHideFlags: 0
@@ -180326,7 +180320,6 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
->>>>>>> origin/MAian
 --- !u!43 &669252082
 Mesh:
   m_ObjectHideFlags: 0
@@ -369608,7 +369601,6 @@ MonoBehaviour:
   m_IgnoreFromBuild: 0
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
-<<<<<<< HEAD
 --- !u!1 &1583573996
 GameObject:
   m_ObjectHideFlags: 0
@@ -369665,12 +369657,8 @@ MonoBehaviour:
   digito2: 0
   digito3: 0
   digito4: 0
---- !u!43 &1585395700
-Mesh:
-=======
 --- !u!1 &1583465981
 GameObject:
->>>>>>> origin/MAian
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
