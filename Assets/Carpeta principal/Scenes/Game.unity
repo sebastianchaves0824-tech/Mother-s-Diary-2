@@ -170420,6 +170420,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SanityAudioController
   AudioMixer: {fileID: 24100000, guid: 6f6dd2ba20cc83f408b8a69cfb1b04b1, type: 2}
   parameterName: MasterLowpassFreq
+  exploracionSnapshot: {fileID: -7344004253529289517, guid: 6f6dd2ba20cc83f408b8a69cfb1b04b1, type: 2}
+  persecucionSnapshot: {fileID: 446835303493423140, guid: 6f6dd2ba20cc83f408b8a69cfb1b04b1, type: 2}
+  tiempoTransicionMusica: 1.5
+  fuenteExploracion: {fileID: 1652357913}
+  fuentePersecucion: {fileID: 1235771345}
   sistemaCordura: {fileID: 571739522}
 --- !u!1001 &572127245
 PrefabInstance:
@@ -272019,6 +272024,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1235771344}
   - {fileID: 1657627436}
   - {fileID: 1652357912}
   m_Father: {fileID: 0}
@@ -322932,6 +322938,135 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1 &1235771343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1235771344}
+  - component: {fileID: 1235771345}
+  m_Layer: 0
+  m_Name: PersecutionMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1235771344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235771343}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 147.1, y: 20, z: 0.000011444092}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 961958659}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1235771345
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235771343}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 956095116195529844, guid: 6f6dd2ba20cc83f408b8a69cfb1b04b1, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 178de5dfb04a2ba44960969c4ae52a33, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1240156673
 GameObject:
   m_ObjectHideFlags: 0
@@ -376492,7 +376627,7 @@ Transform:
   m_GameObject: {fileID: 1628179481}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 122.90001, y: 26.09, z: 14.890012}
+  m_LocalPosition: {x: 122.90001, y: 26.09, z: 43}
   m_LocalScale: {x: 4.5, y: 6, z: 4.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -412908,7 +413043,7 @@ AudioSource:
   m_GameObject: {fileID: 1652357911}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 8170322398366251262, guid: 6f6dd2ba20cc83f408b8a69cfb1b04b1, type: 2}
+  OutputAudioMixerGroup: {fileID: 3627866982953121880, guid: 6f6dd2ba20cc83f408b8a69cfb1b04b1, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: aaf3d7ae7986b8344b528ec2083bcdd9, type: 3}
   m_PlayOnAwake: 1
@@ -413662,6 +413797,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SanityAudioController
   AudioMixer: {fileID: 24100000, guid: 6f6dd2ba20cc83f408b8a69cfb1b04b1, type: 2}
   parameterName: MasterLowpassFreq
+  exploracionSnapshot: {fileID: -7344004253529289517, guid: 6f6dd2ba20cc83f408b8a69cfb1b04b1, type: 2}
+  persecucionSnapshot: {fileID: 446835303493423140, guid: 6f6dd2ba20cc83f408b8a69cfb1b04b1, type: 2}
+  tiempoTransicionMusica: 1.5
+  fuenteExploracion: {fileID: 1652357913}
+  fuentePersecucion: {fileID: 1235771345}
   sistemaCordura: {fileID: 571739522}
 --- !u!43 &1657632601
 Mesh:
