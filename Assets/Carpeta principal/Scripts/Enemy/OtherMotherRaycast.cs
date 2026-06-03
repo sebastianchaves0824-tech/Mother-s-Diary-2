@@ -5,6 +5,8 @@ public class OtherMotherRaycast : MonoBehaviour
     [Header("Configuración")]
     [SerializeField] private float rangoVision = 20f;
 
+    [SerializeField] private LayerMask capaObstaculos;
+   
     [Header("Referencias")]
     [SerializeField] public Transform jugadorTransform;
 
@@ -27,27 +29,29 @@ public class OtherMotherRaycast : MonoBehaviour
 
     void ComprobarVision()
     {
-        if (detectado && jugadorTransform == null)
+        if (jugadorTransform != null)
         {
-             Vector3 origenOjos = transform.position + Vector3.up * 1.5f;
-        Vector3 direccionAljugador = (jugadorTransform.position - origenOjos).normalized;
+            Vector3 origenOjos = transform.position + Vector3.up * 1.5f;
+            Vector3 direccionAljugador = (jugadorTransform.position - origenOjos).normalized;
 
-        RaycastHit hit;
+            RaycastHit hit;
 
-        if (Physics.Raycast(origenOjos, direccionAljugador, out hit, rangoVision))
-        {
-            if (hit.collider.CompareTag("Player"))
-            {
-                detectado = true;
+if (Physics.Raycast(origenOjos, direccionAljugador, out hit, rangoVision, Physics.DefaultRaycastLayers))            {
+                if (hit.collider.CompareTag("Player"))
+                {
+                    detectado = true;
+                }
+                else
+                {
+                    detectado = false;
+                }
             }
             else
             {
                 detectado = false;
             }
         }
-        }
     }
-
 
     private void OnTriggerEnter(Collider other)
     {
@@ -65,4 +69,3 @@ public class OtherMotherRaycast : MonoBehaviour
         }
     }
 }
-
