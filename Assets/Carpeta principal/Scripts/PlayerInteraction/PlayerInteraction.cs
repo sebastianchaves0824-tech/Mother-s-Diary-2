@@ -55,6 +55,12 @@ public class PlayerInteraction : MonoBehaviour
         if (Physics.Raycast(ray, out hit, interactDistance, interactLayer))
         {
             IInteractable interactable = hit.collider.GetComponent<IInteractable>();
+
+            BookTrigger libro = hit.collider.GetComponent<BookTrigger>();
+        if (libro != null)
+        {
+            libro.Interact();
+        }
             // si el objeto con el que choco tiene el tag de nota, se activa la primera pagina del diario que este desactivada y se borra el objeto con que choco.
             if (hit.collider.CompareTag("note") == true)
             {
