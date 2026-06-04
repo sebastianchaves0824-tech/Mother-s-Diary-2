@@ -24,6 +24,10 @@ public class diarycode : MonoBehaviour
             angle = 180;
             pages[pageIndex].SetAsLastSibling();
             pages[pageIndex].transform.Rotate(0,angle,0);
+            if(pages[pageIndex -1].gameObject.activeInHierarchy == true && pages[pageIndex] !=null )
+            {
+                pages[pageIndex - 1].gameObject.SetActive(false);  
+            }  
     }
     public void rotatePageBackward()
     {
@@ -32,6 +36,11 @@ public class diarycode : MonoBehaviour
             pages[pageIndex].SetAsLastSibling();
             pages[pageIndex].transform.Rotate(0,angle,0);
             pageIndex--;
+            if(pages[pageIndex].gameObject.activeInHierarchy == false && pages[pageIndex] != null)
+            {
+                pages[pageIndex].gameObject.SetActive(true);
+            }
+         
     }
     private void ForwardButtonActions()
     {
