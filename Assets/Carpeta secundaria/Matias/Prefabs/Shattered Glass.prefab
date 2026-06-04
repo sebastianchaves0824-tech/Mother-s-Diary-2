@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8625822464832590475
+--- !u!1 &7903874628847680699
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7022199282813384237}
-  - component: {fileID: 4462137085903750453}
-  - component: {fileID: 4001389713818463037}
-  - component: {fileID: 5488127967399084434}
-  - component: {fileID: -6371237629442285609}
-  m_Layer: 6
-  m_Name: KeyPrincipal
+  - component: {fileID: 2401216897890910186}
+  - component: {fileID: 1085102945578168287}
+  - component: {fileID: 630438698492622581}
+  - component: {fileID: 273764215099119851}
+  - component: {fileID: 2296329581838046918}
+  m_Layer: 0
+  m_Name: Shattered Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7022199282813384237
+--- !u!4 &2401216897890910186
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8625822464832590475}
+  m_GameObject: {fileID: 7903874628847680699}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.49173, y: 0.27, z: -0.06}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 3.86, y: 0.36, z: 17.21}
+  m_LocalScale: {x: 1, y: 1, z: 3.6287}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4462137085903750453
+--- !u!33 &1085102945578168287
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8625822464832590475}
+  m_GameObject: {fileID: 7903874628847680699}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &4001389713818463037
+--- !u!23 &630438698492622581
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8625822464832590475}
+  m_GameObject: {fileID: 7903874628847680699}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -68,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4bf97c79c24779241a14f6163d6fafb4, type: 2}
+  - {fileID: 2100000, guid: ff92cf425ac78d54883ada3e54b59190, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -92,13 +92,13 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5488127967399084434
+--- !u!65 &273764215099119851
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8625822464832590475}
+  m_GameObject: {fileID: 7903874628847680699}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -107,22 +107,23 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-6371237629442285609
+--- !u!114 &2296329581838046918
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8625822464832590475}
+  m_GameObject: {fileID: 7903874628847680699}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b801181f5ce8ea46a5bede33dfd24d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 82613a84635dbba45a0dc6b35c01c604, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::KeyItem
-  keyID: Llave_Sotano
+  m_EditorClassIdentifier: Assembly-CSharp::ShatteredGlassPriority
+  enemyTag: Enemy
+  triggerOnce: 0
