@@ -45,7 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8607d57ad2c40cf45bc1a837db0f84cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Flashlight
-  flashlightLight: {fileID: 5436271429681549038}
 --- !u!1 &7922637814359854834
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,8 +72,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7922637814359854834}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.214, y: -0.457, z: 0.543}
   m_LocalScale: {x: 0.08110001, y: 0.056310005, z: 0.25780004}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using TMPro;
 public class PlayerInteraction : MonoBehaviour
 {
     //q tan lejos llega el raycast del puntero
@@ -14,7 +13,7 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] float sanityIncreaseAmount;
     private List<string> inventoryKeys = new List<string>();
     public diarycode pages;
-    public Cordura cordura;
+    public Cordura cordura;    
     private GameObject notaActual;
     private int layerDefault;
     private int layerInteractable;
@@ -23,16 +22,16 @@ public class PlayerInteraction : MonoBehaviour
     void Start()
     {
         layerDefault = LayerMask.NameToLayer("Default");
-        layerInteractable = LayerMask.NameToLayer("Interactable");
+    layerInteractable = LayerMask.NameToLayer("Interactable");
+    
+    // Buscamos la capa
+    layerOutline = LayerMask.NameToLayer("OutlineSelection");
 
-        // Buscamos la capa
-        layerOutline = LayerMask.NameToLayer("OutlineSelection");
-
-        // ¡SALVAVIDAS!: Si devuelve -1, detenemos el juego y te avisamos el porqué
-        if (layerOutline == -1)
-        {
-            Debug.LogError("🚨 ERROR: No se encontró la capa llamada 'OutlineSelection'. ¡Asegúrate de crearla en Unity exactamente con ese nombre!");
-        }
+    // ¡SALVAVIDAS!: Si devuelve -1, detenemos el juego y te avisamos el porqué
+    if (layerOutline == -1)
+    {
+        Debug.LogError("🚨 ERROR: No se encontró la capa llamada 'OutlineSelection'. ¡Asegúrate de crearla en Unity exactamente con ese nombre!");
+    }
     }
 
     private void Update()
@@ -80,7 +79,7 @@ public class PlayerInteraction : MonoBehaviour
                     notaActual = null; 
                   }
                 }
-                cordura.currentSanity = Mathf.Clamp(cordura.currentSanity + sanityIncreaseAmount, 0, cordura.maxSanity);   
+                    cordura.currentSanity = Mathf.Clamp(cordura.currentSanity + sanityIncreaseAmount, 0, cordura.maxSanity);
             }
 
             if (interactable != null)
