@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
     public GameObject diary;
 
     private bool gamePaused = false;
+    private bool viewControllerActive = false;
 
     void Update()
     {
@@ -20,10 +21,11 @@ public class MainMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             // Si el viewer controller está abierto, volver a opciones
-            if (viewControllerWindow != null && viewControllerWindow.activeInHierarchy)
+            if (viewControllerActive)
             {
                 viewControllerWindow.SetActive(false);
                 optionsMenu.SetActive(true);
+                viewControllerActive = false;
             }
             else if (gamePaused)
             {
@@ -69,6 +71,7 @@ public class MainMenu : MonoBehaviour
         mainMenu.SetActive(false);
         viewControllerWindow.SetActive(false);
         optionsMenu.SetActive(true);
+        viewControllerActive = false;
     }
 
     public void OpenMainMenuPanel()
@@ -90,6 +93,8 @@ public class MainMenu : MonoBehaviour
     public void OpenViewController()
     {
         mainMenu.SetActive(false);
+        optionsMenu.SetActive(false);
         viewControllerWindow.SetActive(true);
+        viewControllerActive = true;
     }
 }
