@@ -12,6 +12,7 @@ public class MotherMovement : MonoBehaviour
     public OtherMotherRaycast raycast;
 
     private int ultimoDestinoIndex = -1;
+    private bool estabaDetectando = false;
 
     void Start()
     {
@@ -37,6 +38,18 @@ public class MotherMovement : MonoBehaviour
             {
                 if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
                 {
+                    Debug.Log("Elegir nuevo destino");
+                    ElegirNuevoDestino();
+                }
+            }
+            // Si acaba de perder la detección, vuelve a la ruta
+            else if (agent.hasPath && agent.velocity.sqrMagnitude > 0f)
+            {
+                // Verificar si el destino actual era la posición del jugador
+                // Si es así, elegir un nuevo destino de la ruta
+                if (Vector3.Distance(transform.position, agent.destination) > 5f)
+                {
+                    // Destino muy lejano, probablemente era la posición del jugador
                     ElegirNuevoDestino();
                 }
             }
@@ -65,4 +78,3 @@ public class MotherMovement : MonoBehaviour
         agent.SetDestination(destinos[nuevoIndex].position);
     }
 }
-

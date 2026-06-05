@@ -1,49 +1,38 @@
 using UnityEngine;
+using UnityEngine.InputSystem; // Aseguramos que use el nuevo Input System
 
 public class Flashlight : MonoBehaviour
 {
-    // Referencia a la luz (asegúrate de que sea tipo Spot Light)
-    [SerializeField] private Light linterna;
+    private Camera mainCamera;
+    [SerializeField] private Light flashlightLight;
 
-    // Valores normales
-    [SerializeField] private float rangoNormal = 10f;
-    [SerializeField] private float intensidadNormal = 2f;
-    [SerializeField] private float outerSpotNormal = 30f;
-
-    // Valores al presionar click izquierdo
-    [SerializeField] private float rangoAumentado = 20f;
-    [SerializeField] private float intensidadAumentada = 5f;
-    [SerializeField] private float outerSpotAumentado = 60f;
- 
     void Start()
     {
-        // Configurar valores iniciales
-        if (linterna != null)
-        {
-            linterna.range = rangoNormal;
-            linterna.intensity = intensidadNormal;
-            linterna.spotAngle = outerSpotNormal;
-        }
+        // Obtener la cámara principal
+        mainCamera = Camera.main;
+
+        // Obtener el componente Light del flashlight
+        flashlightLight = GetComponentInChildren<Light>();
+
+        if (mainCamera == null)
+            Debug.LogError("No se encontró la cámara principal");
+        if (flashlightLight == null)
+            Debug.LogError("No se encontró el componente Light en el flashlight");
     }
 
     void Update()
     {
-        if (linterna != null)
+        if (mainCamera == null || flashlightLight == null)
+            return;
+
+        // Hacer que la linterna apunte en la dirección de la cámara (hacia el crosshair)
+        transform.rotation = mainCamera.transform.rotation;
+
+        // DETECTAR LA TECLA E PARA PRENDER / APAGAR
+        if (Keyboard.current.eKey.wasPressedThisFrame)
         {
-            // Si se mantiene presionado el click izquierdo
-            if (Input.GetMouseButton(0)) // 0 = click izquierdo
-            {
-                linterna.range = rangoAumentado;
-                linterna.intensity = intensidadAumentada;
-                linterna.spotAngle = outerSpotAumentado;
-            }
-            else
-            {
-                // Vuelve a los valores normales
-                linterna.range = rangoNormal;
-                linterna.intensity = intensidadNormal;
-                linterna.spotAngle = outerSpotNormal;
-            }
+            // Invierte el estado actual de la luz (si está encendida la apaga, y viceversa)
+            flashlightLight.enabled = !flashlightLight.enabled;
         }
     }
 }
