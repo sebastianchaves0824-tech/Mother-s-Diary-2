@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.unity text eol=lf
 *.prefab text eol=lf
 *.asset text eol=lf
@@ -12,3 +13,6 @@
 *.asmdef text eol=lf
 *.asmref text eol=lf
 *.cs text eol=lf
+=======
+*.fbx filter=lfs diff=lfs merge=lfs -text
+>>>>>>> origin/MAian
