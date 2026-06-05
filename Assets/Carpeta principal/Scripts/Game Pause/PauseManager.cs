@@ -45,8 +45,8 @@ public class PauseManager : MonoBehaviour
     public void Resume()
     {
         if (MainMenu != null) MainMenu.SetActive(false);
-    if (OptionsMenu != null) OptionsMenu.SetActive(false);  
-    if (insanityBar != null) insanityBar.SetActive(true);   
+        if (OptionsMenu != null) OptionsMenu.SetActive(false);  
+        if (insanityBar != null) insanityBar.SetActive(true);   
         
         Time.timeScale = 1f;
         gamePaused = false;
