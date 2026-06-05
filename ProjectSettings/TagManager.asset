@@ -4,6 +4,7 @@
 TagManager:
   serializedVersion: 3
   tags:
+  - note
   - Enemy
   layers:
   - Default
@@ -13,7 +14,7 @@ TagManager:
   - Water
   - UI
   - Interactable
-  - 
+  - OutlineSelection
   - 
   - 
   - 

@@ -1,75 +1,78 @@
 using UnityEngine;
-using UnityEngine.Audio; 
+using UnityEngine.Audio; // Requisito obligatorio para interactuar con las clases del Mixer
 
 public class SanityAudioController : MonoBehaviour
 {
+    // Instancia Singleton para acceso global (Clase 1 - POO)
     public static SanityAudioController Instance { get; private set; }
+
     [Header("Configuración de Audio")]
     public AudioMixer AudioMixer; 
     public string parameterName = "MasterLowpassFreq";
-    //-------------------------------------------------------------------------------------------- 
-    [Header("Referencias a los Snapshots (Música Adaptativa)")]
+
+    [Header("Referencias a los Snapshots (Música Adaptativa)")] //
     [SerializeField] private AudioMixerSnapshot exploracionSnapshot;
     [SerializeField] private AudioMixerSnapshot persecucionSnapshot;
-    [SerializeField] private float tiempoTransicionMusica = 1.5f;
-    //--------------------------------------------------------------------------------------------
+    [SerializeField] private float tiempoTransicionMusica = 1.5f; 
 
     [Header("Referencias a los Audio Sources")]
-    [SerializeField] private AudioSource fuenteExploracion; // Arrastra Musica_Exploracion acá
-    [SerializeField] private AudioSource fuentePersecucion; // Arrastra Musica_Persecucion acá
-    
-    //--------------------------------------------------------------------------------------------
+    [SerializeField] private AudioSource fuenteExploracion; 
+    [SerializeField] private AudioSource fuentePersecucion; 
+
     [Header("Referencia al Componente del Grupo")]
     public Cordura sistemaCordura; 
 
-    private float maxFrequency = 22000f; 
-    private float minFrequency = 50f;   
+    private float maxFrequency = 22000f; //
+    private float minFrequency = 150f;   //
 
-    //--------------------------------------------------------------------------------------------
+    // Variable interna de control según tus nombres de variables
+    private bool estabaPerseguido = false;
 
- private bool estabaPerseguido = false;
- void Awake()
+    void Awake()
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
     }
-    //--------------------------------------------------------------------------------------------
+
     void Start()
     {
         if (sistemaCordura == null)
         {
-            // Busca automaticamente el script Cordura en la escena 
             sistemaCordura = FindFirstObjectByType<Cordura>(); 
         }
     }
 
     void Update()
     {
-        
-        if (sistemaCordura == null|| AudioMixer == null) return;
+        if (sistemaCordura == null || AudioMixer == null) return;
 
-        // sordera
-        float currentPercent = sistemaCordura.currentSanity / sistemaCordura.maxSanity;
+        // --- LÓGICA DE SORDERA (FILTRO) ---
         float targetFreq;
 
-        if (currentPercent >= 100f)
+        if (sistemaCordura.currentSanity >= 100f)
         {
             targetFreq = maxFrequency; 
         }
         else
         {
-            float lowSanityNormalized = currentPercent / 100f; 
-            targetFreq = Mathf.Lerp(minFrequency, maxFrequency, lowSanityNormalized); 
+            float lowSanityNormalized = sistemaCordura.currentSanity / 100f; 
+            targetFreq = Mathf.Lerp(minFrequency, maxFrequency, lowSanityNormalized); //
         }
 
-        AudioMixer.SetFloat(parameterName, targetFreq); bool estaDetectado = sistemaCordura.raycast.detectado;
+        AudioMixer.SetFloat(parameterName, targetFreq); //
 
-       if (!estaDetectado)
+
+        // ==========================================
+        // LÓGICA DE SNAPSHOTS CON DIAGNÓSTICO EN CONSOLA
+        // ==========================================
+        bool estaDetectado = sistemaCordura.raycast.detectado;
+
+        if (!estaDetectado)
         {
             // exploracion
             if (estabaPerseguido)
             {
-
+                
                 if (exploracionSnapshot != null)
                 {
                     exploracionSnapshot.TransitionTo(tiempoTransicionMusica); //
@@ -77,7 +80,7 @@ public class SanityAudioController : MonoBehaviour
                 
                 if (fuentePersecucion != null)
                 {
-                    fuentePersecucion.Stop(); 
+                    fuentePersecucion.Stop(); // Apagamos la música de tensión
                 }
 
                 estabaPerseguido = false;
@@ -88,6 +91,7 @@ public class SanityAudioController : MonoBehaviour
             // persecucion
             if (!estabaPerseguido)
             {
+             
 
                 if (fuentePersecucion != null)
                 {
@@ -102,6 +106,5 @@ public class SanityAudioController : MonoBehaviour
             }
         }
         // ==========================================
-
     }
 }

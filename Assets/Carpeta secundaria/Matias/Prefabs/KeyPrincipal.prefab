@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4462137085903750453}
   - component: {fileID: 4001389713818463037}
   - component: {fileID: 5488127967399084434}
-  - component: {fileID: -6371237629442285609}
+  - component: {fileID: 1436202156138426307}
   m_Layer: 6
   m_Name: KeyPrincipal
   m_TagString: Untagged
@@ -113,7 +113,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-6371237629442285609
+--- !u!114 &1436202156138426307
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8625822464832590475}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b801181f5ce8ea46a5bede33dfd24d5, type: 3}
+  m_Script: {fileID: 11500000, guid: c05e31dbda3c5524d906ccd408fdd626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KeyItem
-  keyID: Llave_Sotano
+  keyID: Llave_Principal

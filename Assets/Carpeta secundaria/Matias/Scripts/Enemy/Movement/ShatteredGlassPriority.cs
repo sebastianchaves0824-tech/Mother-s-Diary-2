@@ -11,7 +11,7 @@ public class ShatteredGlassPriority : MonoBehaviour
     [SerializeField] private bool triggerOnce = true;
 
     private bool hasBeenSteppedOn = false;
-
+    public bool HasBeenSteppedOn => hasBeenSteppedOn;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))

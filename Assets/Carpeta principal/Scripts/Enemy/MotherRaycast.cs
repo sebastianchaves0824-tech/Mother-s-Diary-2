@@ -5,8 +5,7 @@ public class MotherRaycast : MonoBehaviour
     [Header("Configuración de Movimiento")]
     [SerializeField] private float velocidad = 5f;
     [SerializeField] private float rangoVision = 20f;
-    [Header("Filtros")]
-    [SerializeField] private LayerMask capasobstaculo;
+    
     [Header("Referencias")]
     [SerializeField] private Transform jugadorTransform;
     private Rigidbody rb;
@@ -35,21 +34,24 @@ public class MotherRaycast : MonoBehaviour
             Vector3 direccionAlJugador = (jugadorTransform.position - origenOjos).normalized;
 
             RaycastHit hit;
-            
+            // Lanzamos el rayo para ver si hay obstaculos (paredes)
             if (Physics.Raycast(origenOjos, direccionAlJugador, out hit, rangoVision))
             {
                 if (hit.collider.CompareTag("Player"))
                 {
-                    detectado = true;
+                    // Movimiento Fisico
+                    Vector3 velocidadDeseada = direccionAlJugador * velocidad;
+                    // Mantenemos la velocidad vertical original (gravedad)
+                    rb.linearVelocity = new Vector3(velocidadDeseada.x, rb.linearVelocity.y, velocidadDeseada.z);
+
+                    // Rotacion para que el enemigo mire al jugador
+                    Quaternion rotacionObjetivo = Quaternion.LookRotation(new Vector3(direccionAlJugador.x, 0, direccionAlJugador.z));
+                    rb.MoveRotation(rotacionObjetivo);
                 }
                 else
                 {
-                    detectado = false;
+                    DetenerEnemigo();
                 }
-            }
-            else
-            {
-                detectado = false;
             }
         }
         else
