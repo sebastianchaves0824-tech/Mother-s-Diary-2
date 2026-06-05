@@ -692,7 +692,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2464662441675176326}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 32.50363}
   m_LocalScale: {x: 35, y: 38, z: 11.678999}
   m_ConstrainProportionsScale: 0
@@ -1507,7 +1507,7 @@ MonoBehaviour:
     de tu pieza supo que algo andaba mal. Dio un paso atr\xE1s, asustado.\r\n Pero
     esta vez no voy a permitir que nos abandone. Cierro la puerta con llave y agarro
     un cuchillo de la cocina. Se va a quedar con nosotros para siempre. Vamos a volver
-    a ser una familia. \xC9l, vos en mi cuello, y yo.\r\n"
+    a ser una familia. \xC9l, vos en mi cuell, y yo.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1a8e27c8f54fc45489ed3c93de6ef778, type: 2}
   m_sharedMaterial: {fileID: 8301307499868947259, guid: 1a8e27c8f54fc45489ed3c93de6ef778, type: 2}
