@@ -30,7 +30,7 @@ public class OtherMotherRaycast : MonoBehaviour
         if (detectado && jugadorTransform == null)
         {
              Vector3 origenOjos = transform.position + Vector3.up * 1.5f;
-        Vector3 direccionAljugador = (jugadorTransform.position - origenOjos).normalized;
+            Vector3 direccionAljugador = (jugadorTransform.position - origenOjos).normalized;
 
         RaycastHit hit;
 
