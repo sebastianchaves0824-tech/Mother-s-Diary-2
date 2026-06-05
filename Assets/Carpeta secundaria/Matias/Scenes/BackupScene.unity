@@ -5485,9 +5485,9 @@ MonoBehaviour:
   - {fileID: 348909208}
   keyPrefab: {fileID: 8625822464832590475, guid: 5673d226959105b4592d8fe2e86eb092, type: 3}
   keySpawnPoint: {fileID: 1725962305}
-  correctSound: {fileID: 0}
-  errorSound: {fileID: 0}
-  solvedSound: {fileID: 0}
+  correctSound: {fileID: 8300000, guid: c6b988a7f1af80347811829c4eeb5aaa, type: 3}
+  errorSound: {fileID: 8300000, guid: c05716724a59c2941b48bdf73c7a4d5c, type: 3}
+  solvedSound: {fileID: 8300000, guid: 57591c3d199a6fa49808e1a67a05d0f5, type: 3}
   isSolved: 0
 --- !u!82 &1398563729
 AudioSource:
