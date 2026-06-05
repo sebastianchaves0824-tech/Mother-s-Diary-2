@@ -19,6 +19,20 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!245 &-7881133276784508967
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Voces
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 409b69c2e8f08f3408819637d3faa8de
+  m_FloatValues:
+    8794c7110a4373346a407d83a4bd46af: 0.10800299
+    889807b5b1dd0aa479ad10071da01bd4: -80
+    a01ce949fc938db45921647dc7fa6998: -0.02577656
+  m_TransitionOverrides: {}
 --- !u!245 &-7344004253529289517
 AudioMixerSnapshotController:
   m_ObjectHideFlags: 0
@@ -86,6 +100,7 @@ AudioMixerController:
   m_Snapshots:
   - {fileID: -7344004253529289517}
   - {fileID: 446835303493423140}
+  - {fileID: -7881133276784508967}
   m_StartSnapshot: {fileID: -7344004253529289517}
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
@@ -114,9 +129,9 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 87d9acdb8f49b134e8cc8b891366d190
   m_Children:
+  - {fileID: 8170322398366251262}
   - {fileID: -8493273033167707391}
   - {fileID: 4785831415254809292}
-  - {fileID: 8170322398366251262}
   m_Volume: a01ce949fc938db45921647dc7fa6998
   m_Pitch: a50ae43e9470eca43aab948aeb7a0c78
   m_Send: 00000000000000000000000000000000
