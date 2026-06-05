@@ -3,19 +3,80 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-  public GameObject optionsMenu;
-  public GameObject mainMenu;
+    public GameObject optionsMenu;
+    public GameObject mainMenu;
+    public GameObject viewControllerWindow;
+    public GameObject insanityBar;
+    public GameObject diary;
 
-  public void OpenOptionsPanel()
+    private bool gamePaused = false;
+    private bool viewControllerActive = false;
+
+    void Update()
+    {
+        // No pausar si el diario está abierto
+        if (diary != null && diary.activeInHierarchy) return;
+
+        // Detectar la tecla Escape
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            // Si el viewer controller está abierto, volver a opciones
+            if (viewControllerActive)
+            {
+                viewControllerWindow.SetActive(false);
+                optionsMenu.SetActive(true);
+                viewControllerActive = false;
+            }
+            else if (gamePaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+        }
+    }
+
+    public void Pause()
+    {
+        // Mostrar el menu y detener el juego
+        optionsMenu.SetActive(true);
+        if (insanityBar != null) insanityBar.SetActive(false);
+
+        Time.timeScale = 0f;
+        gamePaused = true;
+
+        // Mostrar el cursor y desbloquear una vez abierto el menu
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void Resume()
+    {
+        if (mainMenu != null) mainMenu.SetActive(false);
+        if (optionsMenu != null) optionsMenu.SetActive(false);
+        if (insanityBar != null) insanityBar.SetActive(true);
+
+        Time.timeScale = 1f;
+        gamePaused = false;
+
+        // Ocultar el cursor una vez cerrado el menu
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void OpenOptionsPanel()
     {
         mainMenu.SetActive(false);
+        viewControllerWindow.SetActive(false);
         optionsMenu.SetActive(true);
+        viewControllerActive = false;
     }
-    
-  public void OpenMainMenuPanel()
+
+    public void OpenMainMenuPanel()
     {
-        mainMenu.SetActive(true);
-        optionsMenu.SetActive(false);
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void QuitGame()
@@ -25,6 +86,15 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Game");        
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Game");
+    }
+
+    public void OpenViewController()
+    {
+        mainMenu.SetActive(false);
+        optionsMenu.SetActive(false);
+        viewControllerWindow.SetActive(true);
+        viewControllerActive = true;
     }
 }
