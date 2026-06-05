@@ -79,7 +79,7 @@ public class PlayerInteraction : MonoBehaviour
                     notaActual = null; 
                   }
                 }
-                    cordura.currentSanity += sanityIncreaseAmount;
+                    cordura.currentSanity = Mathf.Clamp(cordura.currentSanity + sanityIncreaseAmount, 0, cordura.maxSanity);
             }
 
             if (interactable != null)
