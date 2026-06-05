@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: com.cqf.urpvolumetricfog.runtime::VolumetricFogVolumeComponent
   active: 0
   distance:
-    m_OverrideState: 0
-    m_Value: 64
+    m_OverrideState: 1
+    m_Value: 194
   baseHeight:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 50
   maximumHeight:
     m_OverrideState: 1
     m_Value: 50
@@ -30,10 +30,10 @@ MonoBehaviour:
     m_Value: 0
   density:
     m_OverrideState: 1
-    m_Value: 0.3
+    m_Value: 1
   attenuationDistance:
-    m_OverrideState: 0
-    m_Value: 128
+    m_OverrideState: 1
+    m_Value: 20
   enableAPVContribution:
     m_OverrideState: 1
     m_Value: 0
@@ -45,13 +45,13 @@ MonoBehaviour:
     m_Value: 1
   anisotropy:
     m_OverrideState: 1
-    m_Value: 0.85
+    m_Value: 1
   scattering:
     m_OverrideState: 1
     m_Value: 0.15
   tint:
-    m_OverrideState: 0
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_OverrideState: 1
+    m_Value: {r: 0.040851314, g: 0.03951584, b: 0.2264151, a: 1}
   enableAdditionalLightsContribution:
     m_OverrideState: 1
     m_Value: 0
@@ -94,16 +94,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
   m_Name: ColorAdjustments
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.ColorAdjustments
-  active: 1
+  active: 0
   postExposure:
     m_OverrideState: 1
-    m_Value: 0.1
+    m_Value: 20.46
   contrast:
     m_OverrideState: 0
     m_Value: 0
   colorFilter:
-    m_OverrideState: 0
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_OverrideState: 1
+    m_Value: {r: 0.05023348, g: 0.043787822, b: 0.2264151, a: 1}
   hueShift:
     m_OverrideState: 0
     m_Value: 0
