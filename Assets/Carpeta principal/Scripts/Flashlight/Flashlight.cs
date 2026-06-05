@@ -6,6 +6,16 @@ public class Flashlight : MonoBehaviour
     private Camera mainCamera;
     [SerializeField] private Light flashlightLight;
 
+    // Valores normales
+    [SerializeField] private float rangoNormal = 10f;
+    [SerializeField] private float intensidadNormal = 2f;
+    [SerializeField] private float outerSpotNormal = 30f;
+
+    // Valores al presionar click izquierdo
+    [SerializeField] private float rangoAumentado = 20f;
+    [SerializeField] private float intensidadAumentada = 5f;
+    [SerializeField] private float outerSpotAumentado = 60f;
+ 
     void Start()
     {
         // Obtener la cámara principal
@@ -18,6 +28,13 @@ public class Flashlight : MonoBehaviour
             Debug.LogError("No se encontró la cámara principal");
         if (flashlightLight == null)
             Debug.LogError("No se encontró el componente Light en el flashlight");
+
+        if (flashlightLight != null)
+        {
+            flashlightLight.range = rangoNormal;
+            flashlightLight.intensity = intensidadNormal;
+            flashlightLight.spotAngle = outerSpotNormal;
+        }
     }
 
     void Update()
@@ -33,6 +50,20 @@ public class Flashlight : MonoBehaviour
         {
             // Invierte el estado actual de la luz (si está encendida la apaga, y viceversa)
             flashlightLight.enabled = !flashlightLight.enabled;
+        }
+
+        // Si se mantiene presionado el click izquierdo, aumentamos el alcance e intensidad
+        if (Input.GetMouseButton(0))
+        {
+            flashlightLight.range = rangoAumentado;
+            flashlightLight.intensity = intensidadAumentada;
+            flashlightLight.spotAngle = outerSpotAumentado;
+        }
+        else
+        {
+            flashlightLight.range = rangoNormal;
+            flashlightLight.intensity = intensidadNormal;
+            flashlightLight.spotAngle = outerSpotNormal;
         }
     }
 }
