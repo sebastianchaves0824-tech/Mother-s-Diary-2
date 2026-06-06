@@ -23,6 +23,6 @@ public class Volume : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        ChangeSlider(slider.value);
     }
 }
