@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Dia/Mes/A\xF1o\r\n Por fin, luego de tanto tiempo intent\xE1ndolo, pudimos
+  m_text: "14/05/2002\r\n Por fin, luego de tanto tiempo intent\xE1ndolo, pudimos
     quedar embarazados. Estoy tan contenta. Hay tantas cosas que quiero ense\xF1arte,
     tantas cosas que quiero mostrarte. Con tu padre hicimos una apuesta de s\xED
     vas a ser una nena o un nene, y el perdedor va a tener que cambiarte los pa\xF1ales
@@ -495,11 +495,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Dia/Mes/A\xF1o\r\n Tu pap\xE1 lleg\xF3 de su viaje. Vino con la mirada
-    baja, vac\xEDa. No me mir\xF3, no me bes\xF3, ni siquiera estir\xF3 los brazos
-    para cargarte. Solo se fue a sentar al sill\xF3n, en silencio. Tengo una sensaci\xF3n
+  m_text: "16/02/2003\r\n Tu pap\xE1 lleg\xF3 de su viaje. Vino con la mirada baja,
+    vac\xEDa. No me mir\xF3, no me bes\xF3, ni siquiera estir\xF3 los brazos para
+    cargarte. Solo se fue a sentar al sill\xF3n, en silencio. Tengo una sensaci\xF3n
     espantosa en el pecho. Nunca me hab\xEDa ignorado as\xED. Siento que pas\xF3
-    algo malo all\xE1 afuera. \r\n -Mama\r\n"
+    algo malo all\xE1 afuera. \r\n -Mam\xE1\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1a8e27c8f54fc45489ed3c93de6ef778, type: 2}
   m_sharedMaterial: {fileID: 8301307499868947259, guid: 1a8e27c8f54fc45489ed3c93de6ef778, type: 2}
@@ -791,11 +791,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Dia/Mes/A\xF1o\r\n Mi ni\xF1o precioso, hoy es tu primer d\xEDa de nacido.
+  m_text: "12/02/2003\r\n Mi ni\xF1o precioso, hoy es tu primer d\xEDa de nacido.
     El parto tuvo algunas complicaciones, y el hospital se sent\xEDa tan fr\xEDo
     sin \xE9l, pero llegaste sano y salvo. Decid\xED nombrarte Rom\xE1n, como tu
     pap\xE1, ten\xE9s sus mismos ojos, su misma nariz, su misma boca. Te voy a amar
-    con todo mi coraz\xF3n.\r\n -Mama\r\n"
+    con todo mi coraz\xF3n.\r\n -Mam\xE1\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1a8e27c8f54fc45489ed3c93de6ef778, type: 2}
   m_sharedMaterial: {fileID: 8301307499868947259, guid: 1a8e27c8f54fc45489ed3c93de6ef778, type: 2}
@@ -1277,8 +1277,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Dia/Mes/A\xF1o\r\nAcabamos de volver del obstetra; te vio sano y fuerte.
-    Es un alivio. \xDAltimamente ven\xEDa sinti\xE9ndome muy descompuesta y ten\xEDa
+  m_text: "22/08/2002\r\nAcabamos de volver del obstetra; te vio sano y fuerte. Es
+    un alivio. \xDAltimamente ven\xEDa sinti\xE9ndome muy descompuesta y ten\xEDa
     miedo de que algo te pasara. Vi tu peque\xF1o coraz\xF3n latir por primera vez
     en la pantalla y fue tan hermoso... Siento que vamos a ser una familia muy linda.
     \r\n -Mam\xE1\r\n"
@@ -1873,7 +1873,9 @@ MonoBehaviour:
   m_text: "Con el tiempo comenc\xE9 a extra\xF1arte, a extra\xF1ar tus llantos, tu
     sufrimiento. Extra\xF1aba el control que ten\xEDa sobre tu dolor. Fui a tu cuna.
     Te pellizque y nada. Te golpe\xE9 la mejilla y nada. Sab\xEDa que no ibas a reaccionar,
-    pero igualmente me decepcion\xE9.\r\n -Mam\xE1\r\n"
+    pero igualmente me decepcion\xE9.\nMe fij\xE9 en tu boca y vi que te hab\xEDa
+    salido un dientito. Agarr\xE9 una pinza para depilar y te lo arranque. Me arm\xE9
+    un collar con \xE9l. De esa forma siempre te iba a tener conmigo.\r\n -Mam\xE1\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1a8e27c8f54fc45489ed3c93de6ef778, type: 2}
   m_sharedMaterial: {fileID: 8301307499868947259, guid: 1a8e27c8f54fc45489ed3c93de6ef778, type: 2}
@@ -1900,8 +1902,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 11.5
-  m_fontSizeBase: 11.5
+  m_fontSize: 9
+  m_fontSizeBase: 9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2220,10 +2222,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xBFPor qu\xE9 me siento as\xED?  \xBFPor qu\xE9 quiero lastimarte?. Sos
+  m_text: "\xBFPor qu\xE9 me siento as\xED?  \xBFPor qu\xE9 quiero lastimarte? Sos
     mi hijo, no deber\xEDa pensar estas cosas, deber\xEDa estar am\xE1ndote, cuid\xE1ndote.
     Pero tu llanto me taladra la cabeza. Ni siquiera puedo amamantarte, mi cuerpo
-    te rechaza. Lo odio tanto, te odio tanto.\r\n"
+    te rechaza. Lo odio tanto, te odio tanto.\n -Juana \r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1a8e27c8f54fc45489ed3c93de6ef778, type: 2}
   m_sharedMaterial: {fileID: 8301307499868947259, guid: 1a8e27c8f54fc45489ed3c93de6ef778, type: 2}
@@ -2250,8 +2252,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 11
+  m_fontSizeBase: 11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2416,16 +2418,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Volvi\xF3. El infiel volvi\xF3 hoy buscando sus cosas. Entre l\xE1grimas,
-    me confes\xF3 que ten\xEDa otra familia, que ten\xEDa otro hijo, uno al que s\xED
-    cuid\xF3, al que s\xED am\xF3. No pude entenderlo: \xBFpor qu\xE9 nos abandon\xF3?
-    \xBFQue tiene la otra que yo no? \r\n Me pidi\xF3 entrar para verte, a ver a
-    nuestro \u201Cbeb\xE9\u201D. No pude decirle la verdad, as\xED que sonre\xED
-    y lo invit\xE9 a pasar. En cuanto vi\xF3 el estado de la casa y el olor que sale
-    de tu pieza supo que algo andaba mal. Dio un paso atr\xE1s, asustado.\r\n Pero
-    esta vez no voy a permitir que nos abandone. Cierro la puerta con llave y agarro
-    un cuchillo de la cocina. Se va a quedar con nosotros para siempre. Vamos a volver
-    a ser una familia. \xC9l, vos en mi cuell, y yo.\r\n"
+  m_text: "15/10/2003\nVolvi\xF3. El infiel volvi\xF3 hoy buscando sus cosas. Entre
+    l\xE1grimas, me confes\xF3 que ten\xEDa otra familia, que ten\xEDa otro hijo,
+    uno al que s\xED cuid\xF3, al que s\xED am\xF3. No pude entenderlo: \xBFpor qu\xE9
+    nos abandon\xF3? \xBFQue tiene la otra que yo no? \r\n Me pidi\xF3 entrar para
+    verte, a ver a nuestro \u201Cbeb\xE9\u201D. No pude decirle la verdad, as\xED
+    que sonre\xED y lo invit\xE9 a pasar. En cuanto vi\xF3 el estado de la casa y
+    el olor que sale de tu pieza supo que algo andaba mal. Dio un paso atr\xE1s,
+    asustado.\r\n Pero esta vez no voy a permitir que nos abandone. Cierro la puerta
+    con llave y agarro un cuchillo de la cocina. Se va a quedar con nosotros para
+    siempre. Vamos a volver a ser una familia. \xC9l, vos en mi cuello, y yo.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1a8e27c8f54fc45489ed3c93de6ef778, type: 2}
   m_sharedMaterial: {fileID: 8301307499868947259, guid: 1a8e27c8f54fc45489ed3c93de6ef778, type: 2}
@@ -3321,7 +3323,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Dia/Mes/A\xF1o\r\nEstoy algo nerviosa. Tu pap\xE1 tiene un viaje de negocios
+  m_text: "04/02/2003\r\nEstoy algo nerviosa. Tu pap\xE1 tiene un viaje de negocios
     justo en la fecha estipulada de tu nacimiento. Me temo que no va a poderte dar
     la bienvenida a este mundo conmigo, pero s\xE9 que en cuanto vuelva va a darte
     todo el amor del mundo. Es un hombre tan cari\xF1oso, siempre tiene algo bueno
