@@ -1684,6 +1684,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu
   optionsMenu: {fileID: 6797009873891319571}
   mainMenu: {fileID: 2628523575368788085}
+  viewControllerWindow: {fileID: 0}
+  insanityBar: {fileID: 0}
+  diary: {fileID: 0}
 --- !u!1 &3615809073888623542
 GameObject:
   m_ObjectHideFlags: 0

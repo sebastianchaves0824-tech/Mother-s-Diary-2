@@ -8,23 +8,21 @@ public class MotherMovement : MonoBehaviour
     [SerializeField] private List<Transform> destinos;
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private Animator animator;
-    [SerializeField] private float velocidadMovimiento = 3.5f;
+    [SerializeField] private Collider motherCollider;
     public OtherMotherRaycast raycast;
 
     private int ultimoDestinoIndex = -1;
 
     void Start()
     {
-        agent.speed = velocidadMovimiento;
         ElegirNuevoDestino();
     }
 
     void Update()
     {
-        agent.speed = velocidadMovimiento;
         if (animator != null)
         {
-            animator.speed = Mathf.Clamp(velocidadMovimiento / 3.5f, 0.1f, 3f);
+            animator.speed = Mathf.Clamp(agent.speed / 3.5f, 0.1f, 3f);
         }
 
         if (raycast.detectado)
@@ -65,4 +63,16 @@ public class MotherMovement : MonoBehaviour
         ultimoDestinoIndex = nuevoIndex;
         agent.SetDestination(destinos[nuevoIndex].position);
     }
-}
+
+    private void OnCollisionEnter(Collision other) {
+        if (gameObject.CompareTag("rampa"))
+        {
+            motherCollider.isTrigger = true;
+        }
+        else
+        {
+            motherCollider.isTrigger = false;
+        }
+    }
+
+    }
