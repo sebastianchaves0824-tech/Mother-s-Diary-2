@@ -3,7 +3,7 @@ using UnityEngine.AI;
 
 public class MotherGlassReaction : MonoBehaviour
 {
-    [Header("Ajustes de Distracción")]
+    [Header("Ajustes de Distracciï¿½n")]
     [Tooltip("Velocidad a la que va a ir la madre a investigar")]
     [SerializeField] private float alertSpeed = 6f;
 
@@ -13,8 +13,9 @@ public class MotherGlassReaction : MonoBehaviour
 
     private void Awake()
     {
-        // obtiene el NavMeshAgent automáticamente de este mismo objeto
+        // obtiene el NavMeshAgent automï¿½ticamente de este mismo objeto
         motherAgent = GetComponent<NavMeshAgent>();
+        originalSpeed = motherAgent.speed;
     }
 
     private void Update()
@@ -36,7 +37,6 @@ public class MotherGlassReaction : MonoBehaviour
         if (motherAgent != null)
         {
             // Guarda la velocidad
-            originalSpeed = motherAgent.speed;
 
             // Aumenta la velocidad y le pone el destino a la fuerza
             motherAgent.speed = alertSpeed;
